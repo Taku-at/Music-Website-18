@@ -1,59 +1,108 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000" />
     <title>Music Website #18</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.min.css">
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <!-- <div class="progress_bar" id="Bar"></div>
+      <!-- <div class="progress_bar" id="Bar"></div>
         <img id="bg" src="" alt=""> -->
 
-        <!-- Header -->
-        <header>
-            <div class="navbar">
-                <button id="sideMenuBtn" class="btn btn-side"><i class="fas fa-chevron-right"></i></button>
+      <!-- Header -->
+      <header class="header shrink">
+        <div class="navbar shrink">
+          <button
+            id="sideMenuBtn"
+            class="btn btn-side"
+            aria-label="Side Menu Button"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
 
-                <div class="navbar__icons">
-                    <button class="btn btn-icon"><i class="fas fa-play"></i></button>
-                    <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
-                    <button class="btn btn-icon"><i class="fas fa-share-alt"></i></button>
-                    <button class="btn btn-icon"><i class="fas fa-bookmark"></i></button>
-                </div>
+          <div class="navbar__icons" aria-label="Button Icons">
+            <button class="btn btn-icon"><i class="fas fa-play"></i></button>
+            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
+            <button class="btn btn-icon">
+              <i class="fas fa-share-alt"></i>
+            </button>
+            <button class="btn btn-icon">
+              <i class="fas fa-bookmark"></i>
+            </button>
+          </div>
 
-                <a href="#" id="logo" class="logo"><span>@</span>Alfred</a>
+          <a href="#" id="logo" class="logo" aria-label="Logo"
+            ><span>@</span>Alfred</a
+          >
 
-                <nav class="menu">
-                    <ul class="menu__links">
-                        <li><a href="#">home</a></li>
-                        <li><a href="#music">Music</a></li>
-                        <li><a href="#comments">Comments</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#info">Info</a></li>
-                    </ul>
-                </nav>
-                <div id="menuBtn" class="btn btn-menu"><i class="fas fa-bars"></i></div>
-            </div>
+          <nav class="menu">
+            <ul class="menu__links">
+              <li><a href="#">home</a></li>
+              <li><a href="#music">Music</a></li>
+              <li><a href="#comments">Comments</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#info">Info</a></li>
+            </ul>
+          </nav>
+          <div id="menuBtn" class="btn btn-menu" aria-label="Menu button">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
 
-            <!-- Banner -->
-            <div class="banner">
-                <img class="banner__img" src="./assets/images/banner.png" alt="Banner Image from savee.it">
-            </div>
-            <!-- /Banner -->
+        <!-- Banner -->
+        <div class="banner shrink">
+          <img
+            class="banner__img"
+            src="./assets/images/banner.png"
+            alt="Banner Image from savee.it"
+            aria-lable="Banner Image"
+          />
+        </div>
+        <!-- /Banner -->
+      </header>
+      <!-- /Header -->
 
-        </header>
-        <!-- /Header -->
-
+      <main>
         <!-- Hero -->
-        <img  src="https://dr.savee-cdn.com/things/5/9/bd0ee609441c2137e2d4de.gif" alt="">
+        <section class="hero">
+          <div class="container">
+            <div class="hero__image">
+              <img
+                src="https://dr.savee-cdn.com/things/5/9/bd0ee609441c2137e2d4de.gif"
+                alt="Hero Image"
+                aria-label="Hero Image"
+              />
+            </div>
 
+            <!-- Profile -->
+            <div class="hero__profile">
+              <p id="artistName" class="hero__profile-name">
+                Simon & Blind sugar
+              </p>
+              <p class="hero__profile-genre">Genre - Pop/Rock</p>
+              <p class="hero__profile-description">
+                The songwriter and produce the songs, highly excitement
+                perfmance. They develop their sound on stage.
+              </p>
 
-
+              <div class="hero__profile-icons">
+                <button><i class="fa fa-play"></i></button>
+                <button><i class="fa fa-thumbs-up"></i></button>
+                <button><i class="fa fa-share-alt"></i></button>
+                <button><i class="fa fa-bookmark"></i></button>
+              </div>
+            </div>
+            <!-- /Profile -->
+          </div>
+        </section>
+        <!-- /Hero -->
 
         <!-- Latest Song Section -->
         <!-- /Latest Song Section -->
@@ -66,17 +115,9 @@
 
         <!-- Footer -->
         <!-- /Footer -->
+      </main>
     </div>
 
-    
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
-
-<!-- Album Images -->
-https://dr.savee-cdn.com/things/5/a/9ab9b443fa7518997c737b.jpg
-https://dr.savee-cdn.com/things/5/a/9ab8d8c7d857189889db9a.jpg
-https://dr.savee-cdn.com/things/5/a/9ab989c7d857189889dbbe.jpg
-
-<!-- Performance Image -->
-https://dr.savee-cdn.com/things/thumbnails/5/9/824a078f604513d94e6753.jpg

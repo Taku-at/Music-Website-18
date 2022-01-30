@@ -39,6 +39,10 @@ a {
 //     background-blend-mode: overlay;
 // }
 
+.container {
+  max-width: 1550px;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   height: 8px;
@@ -54,10 +58,14 @@ a {
 /*----- /Universal Styles -----*/
 
 /*----- Header -----*/
-header {
+.header {
   position: relative;
   height: 100vh;
   width: 100%;
+
+  &.shrink {
+    height: 100px;
+  }
   
   .navbar {
     position: fixed;
@@ -69,7 +77,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    z-index: 90;
+    z-index: 10;
+
+    &.shrink {
+      height: 100px;
+    }
 
     .logo {
       span {
@@ -123,7 +135,15 @@ header {
           padding: 0 10px;
 
           &:last-child a {
+            padding: 10px 15px;
             color: salmon;
+            font-weight: bold;
+            border: 3px double #ec407a;
+
+            &:hover {
+              background-color: #ec407a;
+              color: #161616;
+            }
           }
 
           a {
@@ -170,6 +190,7 @@ header {
         padding: 0.8em 1em;
         margin-bottom: 0.5em;
         transition: all 0.5s ease;
+        z-index: 15;
 
         &:hover {
           background: bisque;
@@ -224,6 +245,10 @@ header {
     height: 100vh;
     z-index: 0;
 
+    &.shrink {
+      height: 100px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -244,6 +269,7 @@ header {
     &__img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
       background-blend-mode: overlay;
 
       position: relative;
@@ -251,3 +277,100 @@ header {
   }
 }
 /*----- /Header -----*/
+
+/*---- Hero Section -----*/
+.hero {
+  overflow: hidden;
+
+  .container {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+
+
+  &__image {
+    width: calc(50% -50px);
+    height: 320px;
+
+    @media (max-width: 778px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__profile {
+    margin-top: 20px;
+    width: 460px;
+    padding: 0 50px;
+
+    @media (min-width: 1150px) {
+      margin-left: 120px;
+    }
+    @media (max-width: 778px) {
+      margin-left: 0;
+      padding: 0 45px;
+    }
+
+    &-name {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2;
+      line-height: 36px;
+    }
+
+    &-genre {
+      font-size: 14px;
+      opacity: .8;
+    }
+
+    &-description {
+      margin: .5em 0;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 1.2;
+      line-height: 1.2;
+      opacity: .8;
+    }
+
+    &-icons {
+      margin-top: 20px;
+      width: 100%;
+      // background-color: red;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        padding: 15px 25px;
+        border-radius: 5px;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ec407a;
+          color: #161616;
+          border: #161616;
+        }
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+
+}
+/*---- Hero Section -----*/
