@@ -58,9 +58,7 @@ header {
   position: relative;
   height: 100vh;
   width: 100%;
-
-  &.
-
+  
   .navbar {
     position: fixed;
     top: 0;
@@ -177,9 +175,12 @@ header {
           background: bisque;
           color: #161616;
         }
+
         // to be active
-        &:active {
+        &.active {
           transform: rotate(90deg);
+          background: bisque;
+          color: #161616;
         }
       }
 
@@ -208,7 +209,7 @@ header {
       align-items: center;
       transition: all 0.5s ease;
 
-      &:hover {
+      &.show {
         transform: translateX(0);
       }
     }
