@@ -33,6 +33,27 @@ a {
   text-decoration: none;
 }
 
+// Button style
+button {
+  padding: 15px 25px;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ec407a;
+    color: #161616;
+    border: #161616;
+  }
+
+  i {
+    font-size: 16px;
+  }
+}
+
 // img {
 //     width: 100%;
 //     height: 100%;
@@ -111,6 +132,17 @@ a {
         transition-property: opacity, visibility;
         transition-timing-function: ease;
         transition-duration: 1.5s;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, .7);
+          z-index: -1;
+        }
 
       }
 
@@ -289,6 +321,10 @@ a {
     align-items: center;
     justify-content: space-around;
 
+    @media (max-width: 550px) {
+      padding: 0;
+    }
+
   }
 
 
@@ -373,4 +409,159 @@ a {
   }
 
 }
-/*---- Hero Section -----*/
+/*---- /Hero Section -----*/
+
+/*---- Latest Section -----*/
+.latest {
+  overflow: hidden;
+  // max-width: 85%;
+  
+  .container {
+    padding: 50px;
+
+    @media (max-width: 550px) {
+      padding: 50px 20px;
+    }
+  }
+
+  &__heading {
+    // font-size: clamp(3vw, 24px, 5vw);
+    margin-bottom: 1.8em;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+
+    i {
+      font-size: 18px;
+      margin-right: -10px;
+    }
+  }
+
+  &__track {
+    display: flex;
+    align-items: center;
+    margin-bottom:.5em;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+
+      @media (max-width: 550px) {
+        width: 50p;
+        height: 50px;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 550px) {
+        margin: -10px;
+      }
+
+      button {
+        border: none;
+
+        &.icon--heart {
+
+          @media (max-width: 550px) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          background: transparent;
+          color: #ec407a;
+        }
+
+        i {
+          padding: 15px 0px;
+        }
+      }
+    }
+
+    .description {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      float: right;
+      white-space: nowrap;
+
+      &__info {
+        margin-right: 150px;
+
+        @media (max-width: 850px) {
+          margin-right: 2em;
+        }
+
+        @media (max-width: 550px) {
+          margin-right: 5px;
+        }
+
+        h3 {
+          font-size: 3vmin;
+          line-height: 28px;
+          color: #fff;
+        }
+        p {
+          font-size: 2vmin;
+        }
+       }
+
+
+      &__number {
+        display: flex;
+        align-items: center;
+        
+        p {
+          margin: 0 1em 0 2em;
+
+          @media (max-width: 750px) {
+            display: none;
+          }
+        }
+
+        i {
+          font-size: 18px;
+
+          &:hover {
+            background: transparent;
+            color: #ec407a;
+          }
+
+          @media (max-width: 550px) {
+            margin: -10px;
+          }
+        }
+       }
+    }
+
+    .actions2 {
+
+      button {
+        border: none;
+
+        @media (max-width: 750px) {
+          margin-right: -1em;
+        }
+
+        @media (max-width: 550px) {
+          margin: -10px;
+        }
+
+        &:hover {
+          background: transparent;
+          color: #ec407a;
+        }
+
+        i {
+          padding: 15px 0px;
+        }
+      }
+    }
+  }
+}
+/*---- /Latest Section -----*/
